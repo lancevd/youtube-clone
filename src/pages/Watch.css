@@ -1,0 +1,90 @@
+@import url('../index.css');
+
+body {
+    background: var(--bg);
+}
+
+.playing-main {
+
+}
+
+.screen {
+    border: dashed red;
+    height: 30rem;
+    /* width: 80vw !important; */
+}
+
+.playing-split {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 2rem;
+}
+
+.playing-left {
+    grid-column: 1/9;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.user-picture {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: limegreen;
+    color: #fff;
+}
+
+.playing-right {
+    grid-column: 9/-1;
+}
+
+.playing-right-prevs {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.playing-right-prevs .card {
+    background: var(--bg);
+}
+
+.tag{
+    border: var(--grey) solid;
+    padding: 5px 10px;
+    border-radius: 18px;
+    /* overflow: hidden; */
+}
+
+.tags .active {
+    background: #fff;
+    color: var(--dark);
+}
+
+
+
+/* ------------ Media Query -------------- */
+
+/* Small to Medium Screens */ 
+
+@media screen and (max-width:992px) {
+    
+    .playing-split {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .playing-right {
+        grid-column: 1/-1;
+    }
+
+    .playing-right-prevs .card {
+        width: 100%;
+    }
+
+}
+
