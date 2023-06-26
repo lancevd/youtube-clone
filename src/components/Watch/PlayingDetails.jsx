@@ -36,6 +36,7 @@ const PlayingDetails = () => {
 		.catch(error => console.log('error', error));
 	}, [])
 
+	console.log(videoData)
 	// let PostDate = new Date(`${videoData.publishedAt}`)
 
 	// let PostDate = videoData.publishedAt

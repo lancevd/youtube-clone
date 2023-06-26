@@ -28,7 +28,7 @@ const HomeCard = (props) => {
   return (
     <div className="card">
         <a href="playing.html">
-        <Link to='/watch?'><img src={Poster} className="card-img-top" alt="Movie poster" /></Link>
+        <Link to={`/watch?watchid=${props.id}`}><img src={Poster} className="card-img-top" alt="Movie poster" /></Link>
         </a>
         <div className="card-body">
             <Link to= {`/watch?watchid=${props.id}`}> <h6 className="card-title"> {Title} </h6> </Link> 
