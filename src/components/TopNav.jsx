@@ -23,6 +23,12 @@ const TopNav = () => {
     const sidebar = document.querySelector('aside');
     const mainDisplay =document.querySelector('.main-display');
 
+    function openSidebar () {
+        sidebar.style = 'grid-column: 1/2;'
+        mainDisplay.style = 'grid-column: 2/-1'
+        alert('Hello')
+    }
+
     function toggleSidebar () {
         // Collapse Sidebar
         if (collapseSidebar.classList.contains('hidden')) {
@@ -47,7 +53,7 @@ const TopNav = () => {
     <nav className="p-3 position-sticky">
         <div id="nav-bar" className="row justify-content-between align-items-center">
             <div id="navbar-left" className="col col-md-2 d-flex gap-4">
-                <div onClick={toggleSidebar} className="d-none nav-icon d-lg-block" id="nav-toggler"><i className='bx bx-menu'></i></div>
+                <div onClick={openSidebar} className="d-none nav-icon d-lg-block" id="nav-toggler"><i className='bx bx-menu'></i></div>
                 <div id="nav-logo"><i className='bx bxl-youtube'></i></div>        
             </div>
             <div id="navbar-center" className="col col-md-6 d-flex justify-content-center gap-3 align-items-center" >
