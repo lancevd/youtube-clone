@@ -31,9 +31,9 @@ const HomeCard = (props) => {
         <Link to={`/watch?watchid=${props.id}`}><img src={Poster} className="card-img-top" alt="Movie poster" /></Link>
         </a>
         <div className="card-body">
-            <Link to= {`/watch?watchid=${props.id}`}> <h6 className="card-title"> {Title} </h6> </Link> 
+            <Link to= {`/watch?watchid=${props.id}`}> <h6 className="card-title"> {Title} </h6> </Link>
             <p className="card-text d-flex gap-2 align-items-center">{Type} <i className="bx bx-check-circle"></i> </p>
-            <p className="card-text">1.2M views {id} • <span className="upload-date">{Year}</span></p>
+          <p className="card-text">{props.views} views • <span className="upload-date">{new Date(Year).toLocaleString('en-Us', {day: 'numeric', month: 'long', year: 'numeric'} )}</span></p>
         </div>
     </div>
   )

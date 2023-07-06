@@ -37,7 +37,7 @@ const MoviesHome = () => {
       
         {movies.map((movie) => (
           // console.log(movie.snippet.title)
-          <HomeCard movieTitle = {movie.snippet.title} moviePoster = {movie.snippet.thumbnails.high.url} year = {movie.snippet.publishedAt} type={movie.snippet.channelTitle} id={movie.id} />
+          <HomeCard movieTitle = {movie.snippet.title} moviePoster = {movie.snippet.thumbnails.high.url} year = {movie.snippet.publishedAt} type={movie.snippet.channelTitle} id={movie.id} views={movie.statistics.viewCount} />
         )
         )}
 
